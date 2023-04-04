@@ -1,23 +1,26 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - Test function for add_nodeint() and print_listint()
+ * main - check the code
  *
- * Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {
-    listint_t *head = NULL;
-    int nums[] = {0, 1, 2, 3, 4, 98, 402, 1024};
-    size_t num_count = sizeof(nums) / sizeof(int);
-    size_t i;
+    listint_t *head;
 
-    for (i = 0; i < num_count; i++)
-        add_nodeint(&head, nums[i]);
-
+    head = NULL;
+    add_nodeint(&head, 0);
+    add_nodeint(&head, 1);
+    add_nodeint(&head, 2);
+    add_nodeint(&head, 3);
+    add_nodeint(&head, 4);
+    add_nodeint(&head, 98);
+    add_nodeint(&head, 402);
+    add_nodeint(&head, 1024);
     print_listint(head);
-
     return (0);
 }
